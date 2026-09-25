@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Building Grids</title>
+    <link rel="stylesheet" href="https://wudesign.me/resources/basic-layout/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <h1>Building Grids</h1>
+
+    <p>There are a number of ways to build grids with HTML and css. Let's look at a few of the most common.</p>
+
+    <p>We're going to build three grids, each very visually similar, but using different techniques. However, many of the styles will be <em>shared across all three grids</em>, and therefore each grid will have <strong>two</strong> classes: one that they all share (<code>grid</code>) and one that is specific to the technique (<code>using-inline-block</code>, <code>using-flex</code>, or <code>using-grid</code>).</p>
+
+
+    <section>
+
+        <h1>Grids using the <code class="tag">table</code> element</h1>
+
+        <p>Do not use tables to create layout grids. While the <code class="tag">table</code> element does indeed produce a grid of cells, its semantic purpose is actually to present data that is tabular, like a spreadsheet of numbers. It is <strong>not</strong> intended to be used as a layout tool for page content.</p>
+
+    </section>
+
+
+    <section>
+
+        <h1>Grids using <em>float</em></h1>
+
+        <p>It is possible to use the <em>float</em> property to create grids, and you may see some suggestions online for doing so. Don't. <em>As a general rule, you should only use <code>float</code> when you actually need to wrap text or other inline elements around another element.</em></p>
+
+    </section>
+
+
+    <section>
+
+        <h1>Grids using <em>inline-block</em></h1>
+
+        <p>We've discussed how some elements are <em>inline</em> elements and some are <em>block</em> elements. We can control this behavior with the <code>display</code> css property.</p>
+
+        <p>There exists a hybrid of these two behaviors: <code>display: inline-block;</code>. Elements with this rule applied will be styleable like blocks, but will align themselves horizontally like words.</p>
+
+        <ul class="grid using-inline-block">
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Abram Siemsen portrait">
+                <div>Abram Siemsen</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Two</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Three</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Four</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Five</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Six</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Seven</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Eight</div>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <section>
+
+        <h1>Grids using <code>flex</code></h1>
+
+        <p><dfn>Flex Layout</dfn>, or <dfn>flexbox</dfn>, is another way to create a grid.</p>
+
+        <ul class="grid using-flex">
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Abram Siemsen portrait">
+                <div>Abram Siemsen</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Two</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Three</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Four</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Five</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Six</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Seven</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Eight</div>
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <section>
+
+        <h1>Grids using <em>grid</em></h1>
+
+        <p>Grid layout is another way to create columns using CSS.</p>
+
+        <ul class="grid using-grid">
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Abram Siemsen portrait">
+                <div>Abram Siemsen</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Two</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Three</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Four</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Five</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Six</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Seven</div>
+            </li>
+
+            <li>
+                <img src="http://wudesign.me/resources/basic-layout/images/portrait.png" alt="Person portrait">
+                <div>Person Eight</div>
+            </li>
+
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
