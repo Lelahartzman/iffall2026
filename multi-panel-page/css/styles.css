@@ -1,0 +1,270 @@
+/* ------------------------- */
+/* GENERAL STYLES */
+/* ------------------------- */
+
+body {
+    margin: 0;
+    font-family: "Archivo Narrow", sans-serif;
+    color: #333;
+}
+
+section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 960px;
+    margin: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+/* ------------------------- */
+/* SECTION ONE */
+/* ------------------------- */
+
+.intro {
+    height: 500px;
+
+    padding-top: 165px;
+
+    text-align: center;
+
+    color: white;
+
+    background-image: url("../images/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.intro h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+
+
+/* ------------------------- */
+/* SECTION TWO */
+/* ------------------------- */
+
+.section-two {
+    background-color: #09243c;
+
+    color: white;
+
+    padding-top: 60px;
+
+    padding-bottom: 80px;
+
+    min-height: 480px;
+}
+
+.section-two .landscape {
+    width: 400px;
+
+    float: right;
+
+    margin-left: 40px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #aaa;
+}
+
+.section-two .content {
+    display: flow-root;
+}
+
+
+
+/* ------------------------- */
+/* SECTION THREE */
+/* ------------------------- */
+
+.section-three {
+    background-color: #09243c;
+
+    color: white;
+
+    padding-top: 60px;
+
+    padding-bottom: 80px;
+}
+
+.section-three .landscape {
+    width: 400px;
+
+    float: right;
+
+    margin-left: 40px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #aaa;
+}
+
+.section-three .content {
+    display: flow-root;
+}
+
+.section-three p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+
+/* ------------------------- */
+/* SECTION FOUR */
+/* ------------------------- */
+
+.section-four {
+    background-color: #f0f0f0;
+
+    padding-top: 70px;
+
+    padding-bottom: 80px;
+}
+
+.section-four h2 {
+    color: #333;
+
+    margin-bottom: 45px;
+}
+
+
+/* MAKES TWO COLUMNS */
+
+.photo-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 60px;
+
+    row-gap: 25px;
+}
+
+
+/* EACH PHOTO AND ITS TEXT */
+
+.photo-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    width: 100%;
+}
+
+
+/* MAKES ALL SIX PHOTOS THE SAME SIZE */
+
+.photo-item img {
+    width: 230px;
+
+    height: 170px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+
+/* PHOTO TITLES */
+
+.photo-item h3 {
+    font-size: 20px;
+
+    margin-top: 0;
+
+    margin-bottom: 8px;
+}
+
+
+/* PHOTO DESCRIPTIONS */
+
+.photo-item p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+}
+
+
+
+/* ------------------------- */
+/* SECTION FIVE */
+/* ------------------------- */
+
+.section-five {
+    background-color: #c90018;
+
+    color: white;
+
+    text-align: center;
+
+    padding-top: 70px;
+
+    padding-bottom: 90px;
+}
+
+.section-five h2 {
+    margin-bottom: 35px;
+}
+
+.section-five p {
+    width: 750px;
+
+    margin: auto;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+}
+
+
+
+/* ------------------------- */
+/* FOOTER */
+/* ------------------------- */
+
+footer {
+    background-color: #333;
+
+    color: white;
+
+    padding-top: 35px;
+
+    padding-bottom: 35px;
+
+    font-size: 18px;
+}
