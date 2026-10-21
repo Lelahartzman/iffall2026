@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positioning</title>
+  <link rel="stylesheet" href="https://wudesign.me/resources/basic-layout/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <h1>Positioning</h1>
+
+  <p>On every page we've built thus far, the position of every element has been determined by where that element landed in the <dfn>document flow</dfn>. Elements at the beginning of the HTML document are positioned at the beginning of the rendered page, then as we proceed toward the bottom of the source code, the finished output is rendered sequentially, more or less like words in a word processor. The document flow can be tricky to manage for complex layouts, but it is also incredibly flexible, because it's built around the idea that content determines page height. However much content you have, it always fits!</p>
+
+  <p>While relying on the document flow to position elements is almost always the right way to go, it is not the <em>only</em> way. CSS provides us with tools for taking control of (and responsibility for) the position of elements directly.</p>
+
+  <p>We can control the position of an element with a combination of the <code>position</code> property, and the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties.</p>
+
+  <section>
+    <h1>The <em>top</em>, <em>right</em>, <em>bottom</em>, and <em>left</em> properties</h1>
+
+    <p>These properties use a simple numeric value, usually expressed in pixels or as a percent, such as <code>left: 100px;</code>. However, these properties are meaningless in isolation: to change anything, the element must also be <em>positioned</em> using the <code>position</code> property, and <em>how</em> the element is changed depends on <code>position</code> as well.</p>
+  </section>
+
+  <section>
+    <h1>The <em>position</em> property</h1>
+
+    <p>The <em>position</em> property has five possible values: <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, and <code>sticky</code>. Setting one of these values <em>always</em> serves two purposes:</p>
+
+    <ul>
+      <li>It specifies the <dfn>positioning model</dfn> to be used for the element.</li>
+      <li>It determines whether the element is a <dfn>positioning parent</dfn>.</li>
+    </ul>
+
+    <p>Let's look at each possible value in turn.</p>
+
+    <section class="static-example">
+      <h1><code>position: static;</code></h1>
+
+      <div class="positioned-element"></div>
+
+      <p><dfn>Static</dfn> is the normal value for HTML elements. It means the element follows the document flow. Elements that are <code>position: static;</code> are not considered to be positioned: the top, right, bottom, and left properties have no effect on static elements.</p>
+
+      <ol class="instructions">
+        <li>Create and link a stylesheet for this document.</li>
+        <li>Create a selector for <code>.static-example .positioned-element</code>, and set <code>background-color: green;</code>.</li>
+        <li>Set <code>left: 100px;</code> for the square. You'll see no change because it is static.</li>
+      </ol>
+    </section>
+
+    <section class="relative-example">
+      <h1><code>position: relative;</code></h1>
+
+      <div class="positioned-element"></div>
+
+      <p>Elements set to <dfn>relative</dfn> also follow the document flow, but can be offset from their normal position.</p>
+
+      <ol class="instructions">
+        <li>Change this square to <code>background-color: lightblue;</code>.</li>
+        <li>Set <code>position: relative;</code>.</li>
+        <li>Set <code>left: 100px;</code>.</li>
+        <li>Set <code>top: 50px;</code>.</li>
+      </ol>
+
+      <p>Relative positioning leaves a hole behind: surrounding text behaves as though the square were still in its original place.</p>
+
+      <p>Relatively positioned elements can also become positioning parents for absolutely positioned descendants.</p>
+    </section>
+
+    <section class="absolute-example">
+      <h1><code>position: absolute;</code></h1>
+
+      <div class="positioned-element"></div>
+
+      <p>Elements set to <code>position: absolute;</code> are <em>ignored</em> by the document flow, as if they don't exist.</p>
+
+      <ol class="instructions">
+        <li>Make this square red and set <code>position: absolute;</code>.</li>
+      </ol>
+
+      <p>Text after the element slides up to fill the space. Setting <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> repositions it.</p>
+
+      <ol class="instructions">
+        <li>Add <code>top: 0;</code>.</li>
+      </ol>
+
+      <p>The positioning parent is the nearest ancestor that is positioned. Without one, the element is positioned relative to the document.</p>
+
+      <ol class="instructions">
+        <li>Create a selector for <code>.absolute-example</code>.</li>
+        <li>Set <code>position: relative;</code> for the section.</li>
+        <li>Set <code>right: 0;</code> for the red square.</li>
+      </ol>
+
+      <p>The red box now sits at the upper-right corner of its section.</p>
+
+      <aside>
+        <p>Absolute positioning can be useful for small interface details, but isn't a good replacement for normal document flow when building responsive layouts.</p>
+      </aside>
+    </section>
+
+    <section class="fixed-example">
+      <h1><code>position: fixed;</code></h1>
+
+      <div class="positioned-element"></div>
+
+      <p>Fixed elements are removed from document flow and positioned relative to the browser window. They stay in place when the page scrolls.</p>
+
+      <ol class="instructions">
+        <li>Make the square purple.</li>
+        <li>Set <code>position: fixed;</code>.</li>
+        <li>Set <code>top: 0;</code> and <code>left: 0;</code>.</li>
+        <li>Add <code>width: 100%;</code> to make a navigation bar.</li>
+      </ol>
+
+      <p>The purple bar stays at the top of the viewport as you scroll.</p>
+    </section>
+
+    <section class="sticky-example">
+      <h1><code>position: sticky;</code></h1>
+
+      <div class="positioned-element"></div>
+
+      <p><dfn>Sticky</dfn> positioning is a hybrid of relative and fixed. The element scrolls normally until it reaches its specified threshold, then sticks until its containing section ends.</p>
+
+      <ol class="instructions">
+        <li>Make the square orange.</li>
+        <li>Set <code>position: sticky;</code>.</li>
+        <li>Set <code>top: 50px;</code>.</li>
+      </ol>
+
+      <p>Scroll to see the orange square stick and then move away when the section ends.</p>
+    </section>
+
+  </section>
+
+  <section>
+    <h1>The <dfn>z-index</dfn> property</h1>
+
+    <p>Positioned elements may overlap. The <code>z-index</code> property controls which elements appear in front, like Bring to Front or Send to Back in Illustrator.</p>
+
+    <ol class="instructions">
+      <li>Set <code>z-index: -1;</code> on the lightblue square.</li>
+      <li>Set <code>z-index: 9999;</code> on the purple fixed navigation bar.</li>
+    </ol>
+
+    <p>Higher z-index values appear in front within their stacking context.</p>
+  </section>
+
+  <p>Positioning is best used for specific layout enhancements, rather than as a replacement for normal document flow.</p>
+
+</body>
+</html>
