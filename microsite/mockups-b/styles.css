@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  background-color: #eeeae0;
+  color: #242521;
+  font-family: Arial, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 2px solid #242521;
+}
+header p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+main {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+.title-section {
+  padding: 70px 0;
+  border-bottom: 2px solid #242521;
+}
+.label {
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+h1 {
+  font-size: 100px;
+  line-height: 0.95;
+  letter-spacing: -5px;
+  margin: 40px 0;
+}
+
+h1 span {
+  color: #a83e32;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 800px;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.archive {
+  display: flex;
+  gap: 80px;
+  padding: 70px 0;
+  border-bottom: 2px solid #242521;
+}
+
+.contents {
+  width: 50%;
+}
+
+
+.contents h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+nav a {
+  display: block;
+  color: #242521;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 18px 0;
+  border-bottom: 1px solid #aaa79f;
+}
+nav a:hover {
+  color: #a83e32;
+  padding-left: 10px;
+}
+.feature {
+  width: 50%;
+}
+
+.feature img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+.feature p {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  padding: 70px 0;
+}
+.timeline h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  border-top: 1px solid #aaa79f;
+  padding: 20px 0;
+}
+.event h3 {
+  font-size: 60px;
+  color: #a83e32;
+  width: 220px;
+  margin: 0;
+}
+
+.event p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.sources {
+  border-top: 2px solid #242521;
+  padding: 35px 0 70px;
+}
+
+.sources h2 {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.sources a {
+  color: #a83e32;
+}
+
+footer {
+  background-color: #242521;
+  color: #eeeae0;
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+
+@media (max-width: 700px) {
+  main {
+    padding: 0 20px;
+  }
+  header {
+    padding: 15px 20px;
+  }
+  h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+  .intro,
+  .archive,
+  .event {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contents,
+  .feature {
+    width: 100%;
+  }
+  .event h3 {
+    font-size: 42px;
+    width: auto;
+  }
+  footer {
+    display: block;
+  }
+}
